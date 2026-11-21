@@ -1,0 +1,246 @@
+/* ISBAT Student Self-Service Portal - shared external stylesheet */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f5f9;
+  color: #1f2430;
+  line-height: 1.5;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background: #1A1A2E;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+}
+
+.logo {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  padding: 0 16px 6px;
+}
+
+.logo span {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #a9adc7;
+  margin-top: 2px;
+}
+
+.student-name {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 18px 16px;
+  margin: 18px 0 12px;
+  border-top: 1px solid #34345a;
+  border-bottom: 1px solid #34345a;
+}
+
+.student-name small {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  color: #a9adc7;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 12px 24px;
+  color: #d5d7e8;
+  text-decoration: none;
+  font-size: 14px;
+  border-left: 4px solid transparent;
+}
+
+.sidebar nav a:hover {
+  background: #26264a;
+  color: #ffffff;
+}
+
+.sidebar nav a.active {
+  background: #26264a;
+  color: #ffffff;
+  border-left-color: #e8b923;
+}
+
+/* ---------- Main area ---------- */
+.main {
+  margin-left: 200px;
+  padding: 32px 36px;
+}
+
+.page-header {
+  margin-bottom: 28px;
+}
+
+.page-header h1 {
+  font-size: 26px;
+  color: #1A1A2E;
+}
+
+.page-header .date {
+  color: #5d6275;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.status-line {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #5d6275;
+}
+
+h2.section-title {
+  font-size: 18px;
+  color: #1A1A2E;
+  margin: 32px 0 14px;
+}
+
+/* ---------- Metric cards (Flexbox) ---------- */
+.metrics {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.metric-card {
+  flex: 1;
+  min-width: 190px;
+  background: #ffffff;
+  border: 1px solid #d9dce7;
+  border-radius: 10px;
+  padding: 22px;
+}
+
+.metric-card .label {
+  font-size: 13px;
+  color: #5d6275;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-card .value {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1A1A2E;
+  margin-top: 6px;
+}
+
+.metric-card .note {
+  font-size: 12px;
+  color: #7b8094;
+  margin-top: 2px;
+}
+
+/* ---------- Tables ---------- */
+.table-wrap {
+  background: #ffffff;
+  border: 1px solid #d9dce7;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 11px 14px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.courses-table th {
+  background: #1A1A2E;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.courses-table td {
+  border-bottom: 1px solid #e6e8f0;
+}
+
+.courses-table tr:last-child td {
+  border-bottom: none;
+}
+
+.courses-table td.status {
+  text-align: center;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* ---------- Timetable layout (colours are in courses.html) ---------- */
+.timetable {
+  table-layout: fixed;
+  min-width: 860px;
+}
+
+.timetable th,
+.timetable td {
+  border: 1px solid #d9dce7;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px 6px;
+  height: 58px;
+}
+
+.timetable th {
+  background: #1A1A2E;
+  color: #ffffff;
+  height: auto;
+}
+
+.timetable td.day {
+  background: #eceef6;
+  font-weight: 700;
+  font-size: 13px;
+  width: 70px;
+}
+
+.timetable td small {
+  display: block;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+/* ---------- Placeholder pages ---------- */
+.placeholder {
+  background: #ffffff;
+  border: 1px dashed #b9bdd0;
+  border-radius: 10px;
+  padding: 48px;
+  text-align: center;
+  color: #5d6275;
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+  .main {
+    margin-left: 0;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Courses | ISBAT Student Portal</title>
+
+  <!-- External CSS: layout -->
+  <link rel="stylesheet" href="portal.css">
+
+  <!-- Internal CSS: timetable colours only -->
+  <style>
+    .webtech  { background: #D6E4FF; color: #14337a; }
+    .cprog    { background: #FFE3C7; color: #7a3a05; }
+    .database { background: #D8F3DC; color: #1b4d2b; }
+    .network  { background: #EBDDFB; color: #46217a; }
+    .timetable td.free { background: #ffffff; }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="logo">ISBAT<span>UNIVERSITY</span></div>
+    <div class="student-name">
+      Sarah Nakato
+      <small>Reg. No. 24/BIT/0412</small>
+    </div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="courses.html" class="active">My Courses</a>
+      <a href="fees.html">Fee Statement</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="page-header">
+      <h1>My Courses</h1>
+      <p class="date">Bachelor of Information Technology, Year 2, Semester 1</p>
+    </header>
+
+    <h2 class="section-title" style="margin-top:0;">Enrolled Courses</h2>
+    <div class="table-wrap">
+      <table class="courses-table">
+        <thead>
+          <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Credits</th>
+            <th>Lecturer</th>
+            <th>Room</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>BIT 2101</td>
+            <td>Web Technologies</td>
+            <td>4</td>
+            <td>Mr. Ronald Ssekandi</td>
+            <td>Lab 2</td>
+            <td class="status" style="background:#E1F5EE; color:#085041;">Active</td>
+          </tr>
+          <tr>
+            <td>BIT 2102</td>
+            <td>C Programming</td>
+            <td>4</td>
+            <td>Ms. Judith Atim</td>
+            <td>Lab 1</td>
+            <td class="status" style="background:#E1F5EE; color:#085041;">Active</td>
+          </tr>
+          <tr>
+            <td>BIT 2103</td>
+            <td>Database Systems</td>
+            <td>4</td>
+            <td>Dr. Moses Kigozi</td>
+            <td>Room B12</td>
+            <td class="status" style="background:#E1F5EE; color:#085041;">Active</td>
+          </tr>
+          <tr>
+            <td>BIT 2104</td>
+            <td>Computer Networks</td>
+            <td>4</td>
+            <td>Mr. Brian Mugisha</td>
+            <td>Room A07</td>
+            <td class="status" style="background:#E1F5EE; color:#085041;">Active</td>
+          </tr>
+          <tr>
+            <td>BIT 2105</td>
+            <td>Systems Analysis and Design</td>
+            <td>3</td>
+            <td>Mrs. Prossy Namutebi</td>
+            <td>Room B05</td>
+            <td class="status" style="background:#FAEEDA; color:#633806;">Pending</td>
+          </tr>
+          <tr>
+            <td>BCS 2106</td>
+            <td>Business Communication Skills</td>
+            <td>3</td>
+            <td>Ms. Esther Kyomuhendo</td>
+            <td>Lecture Theatre 1</td>
+            <td class="status" style="background:#FAEEDA; color:#633806;">Pending</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="section-title">Weekly Timetable</h2>
+    <div class="table-wrap">
+      <table class="timetable">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>8:00 - 9:00</th>
+            <th>9:00 - 10:00</th>
+            <th>10:00 - 11:00</th>
+            <th>11:00 - 12:00</th>
+            <th>12:00 - 1:00</th>
+            <th>1:00 - 2:00</th>
+            <th>2:00 - 3:00</th>
+            <th>3:00 - 4:00</th>
+            <th>4:00 - 5:00</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="day">Mon</td>
+            <td class="webtech" colspan="2">Web Technologies<small>Lab 2</small></td>
+            <td class="free"></td><td class="free"></td><td class="free"></td><td class="free"></td>
+            <td class="database" colspan="2">Database Systems<small>Room B12</small></td>
+            <td class="free"></td>
+          </tr>
+          <tr>
+            <td class="day">Tue</td>
+            <td class="free"></td><td class="free"></td>
+            <td class="cprog" colspan="2">C Programming<small>Lab 1</small></td>
+            <td class="free"></td><td class="free"></td>
+            <td class="network" colspan="2">Computer Networks<small>Room A07</small></td>
+            <td class="free"></td>
+          </tr>
+          <tr>
+            <td class="day">Wed</td>
+            <td class="free"></td><td class="free"></td><td class="free"></td><td class="free"></td>
+            <td class="webtech" colspan="2">Web Technologies<small>Lab 2</small></td>
+            <td class="free"></td><td class="free"></td><td class="free"></td>
+          </tr>
+          <tr>
+            <td class="day">Thu</td>
+            <td class="free"></td><td class="free"></td>
+            <td class="network" colspan="2">Computer Networks<small>Room A07</small></td>
+            <td class="free"></td><td class="free"></td>
+            <td class="cprog" colspan="2">C Programming<small>Lab 1</small></td>
+            <td class="free"></td>
+          </tr>
+          <tr>
+            <td class="day">Fri</td>
+            <td class="database" colspan="2">Database Systems<small>Room B12</small></td>
+            <td class="free"></td><td class="free"></td><td class="free"></td><td class="free"></td>
+            <td class="free"></td><td class="free"></td><td class="free"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+</html>

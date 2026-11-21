@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | ISBAT Student Portal</title>
+
+  <!-- External CSS: all layout -->
+  <link rel="stylesheet" href="portal.css">
+
+  <!-- Internal CSS: quick-links grid only -->
+  <style>
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .quick-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 130px;
+      padding: 24px;
+      background: #ffffff;
+      border: 1px solid #d9dce7;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #1A1A2E;
+      transition: box-shadow 0.15s, transform 0.15s, border-color 0.15s;
+    }
+
+    .quick-card:hover {
+      border-color: #1A1A2E;
+      box-shadow: 0 6px 16px rgba(26, 26, 46, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .quick-card .card-label {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .quick-card .card-link {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #3b5bdb;
+    }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="logo">ISBAT<span>UNIVERSITY</span></div>
+    <div class="student-name">
+      Sarah Nakato
+      <small>Reg. No. 24/BIT/0412</small>
+    </div>
+    <nav>
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="courses.html">My Courses</a>
+      <a href="fees.html">Fee Statement</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="page-header">
+      <h1>Welcome, Sarah Nakato</h1>
+      <p class="date" id="today">Saturday, 21 November 2026</p>
+      <p class="status-line">
+        Registration status:
+        <!-- Inline CSS: status badge only -->
+        <span style="background:#EAF3DE; color:#27500A; padding:3px 12px; border-radius:12px; font-size:13px; font-weight:600;">Active</span>
+      </p>
+    </header>
+
+    <section class="metrics">
+      <div class="metric-card">
+        <div class="label">GPA</div>
+        <div class="value">3.62</div>
+        <div class="note">Cumulative, out of 5.0</div>
+      </div>
+      <div class="metric-card">
+        <div class="label">Credit Hours</div>
+        <div class="value">22</div>
+        <div class="note">This semester</div>
+      </div>
+      <div class="metric-card">
+        <div class="label">Outstanding Fee Balance</div>
+        <div class="value">UGX 1,250,000</div>
+        <div class="note">Due before final exams</div>
+      </div>
+    </section>
+
+    <h2 class="section-title">Quick Links</h2>
+    <section class="quick-links">
+      <a class="quick-card" href="dashboard.html">
+        <span class="card-label">Dashboard</span>
+        <span class="card-link">Go to Dashboard &rarr;</span>
+      </a>
+      <a class="quick-card" href="courses.html">
+        <span class="card-label">My Courses</span>
+        <span class="card-link">View courses &amp; timetable &rarr;</span>
+      </a>
+      <a class="quick-card" href="fees.html">
+        <span class="card-label">Fee Statement</span>
+        <span class="card-link">View statement &rarr;</span>
+      </a>
+      <a class="quick-card" href="profile.html">
+        <span class="card-label">Update Profile</span>
+        <span class="card-link">Edit your details &rarr;</span>
+      </a>
+    </section>
+  </main>
+
+  <script>
+    // Show today's date (falls back to the static text above if scripting is off)
+    document.getElementById("today").textContent =
+      new Date().toLocaleDateString("en-GB", {
+        weekday: "long", day: "numeric", month: "long", year: "numeric"
+      });
+  </script>
+</body>
+</html>
